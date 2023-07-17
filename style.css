@@ -1,0 +1,148 @@
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,800;1,300;1,500;1,600&family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+/* common shared style */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* nav related styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 85px 120px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+/* banner related styles */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 120px;
+}
+
+.banner-container button {
+    color: white;
+    background-color: #E02C6D;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.banner-img img {
+    background-image: url("./images/Circle\ design.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* online shop images style */
+ .online-shop {
+     display: grid;
+    grid-template-columns: repeat(7,1fr);
+} 
+
+.online-shop img {
+    width: 50px;
+}
+/* collection related styles */
+.collection-header{
+    text-align: center;
+}
+.collection-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 200px;
+    gap: 20px;
+}
+.items{
+    width: 250px;
+    padding: 5px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 8px;
+}
+.items img{
+    width: 100%;
+}
+.see-more{
+    
+    width: 1020px;
+    text-align: end;
+    border: none;
+    color: rgba(224, 44, 109, 1);
+}
+/* mobile device style */
+@media screen and (max-width:576px) {
+    .nav-container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+    }
+
+    nav ul li {
+        margin-top: 10px;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .banner-heading,
+    .banner-context {
+        text-align: center;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .banner-img img {
+        max-width: 200px;
+    }
+
+    /* online shop images style */
+    .online-shop {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* colloction related media query */
+    .collection-container{
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 10px;
+    }
+    .items{
+        width: 90%;
+        padding: 5px;
+        margin: 10px;
+    }
+    .items img{
+        width: 100%;
+    }
+    .see-more{
+        width: 100%;
+    }
+}
